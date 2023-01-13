@@ -1,0 +1,14 @@
+{"name": "exp47base",
+  "descr": "logloss vs group fairness vs adv robust loss, hypernetworks",
+  "func": "source.pareto_finders.pareto_3d.get_pareto_plane",
+  "func_args": {
+    "loss_fncs": ["log_loss_wrapper", "group_fair_loss", "robust_adv_loss", "regulizer_loss"],
+    "metrics_fncs": ["log_loss_as_metric", "group_fair_loss_as_metric", "robust_adv_loss_as_metric"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "robust_loss_eps": 0.25,
+    "grid_sz": 10,
+    "n_folds": 1
+  }
+}

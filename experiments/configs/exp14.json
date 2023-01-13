@@ -1,0 +1,13 @@
+{"name": "exp14",
+  "descr": "Ind Fairness vs Acc with 100 grid size",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "ind_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_individual_fairness"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "grid_sz": 100
+  }
+}

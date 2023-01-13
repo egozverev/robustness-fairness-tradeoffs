@@ -1,0 +1,13 @@
+{"name": "exp38",
+  "descr": "torch acc vs consistent robustness 250 epochs 4096 batch size, n_fold=3",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "loss_fncs": ["log_loss_wrapper",  "robust_l2_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_l2_robustness"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "grid_sz": 30,
+    "n_folds": 3
+  }
+}

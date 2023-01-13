@@ -1,0 +1,14 @@
+{"name": "exp28",
+  "descr": "acc vs ind fairness vs group fairness",
+  "func": "source.pareto_finders.pareto_3d.get_pareto_plane",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "ind_fair_loss", "group_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_individual_fairness", "compute_demographic_fairness"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "grid_sz": 10,
+    "n_folds": 5
+  }
+}

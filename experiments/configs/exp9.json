@@ -1,0 +1,14 @@
+{"name": "exp1",
+  "descr": "Ind Fairness vs Acc with custom grid",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "ind_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_individual_fairness"],
+    "x": "./data/adult/x.npy",
+    "y": "./data/adult/y.npy",
+    "groups": "./data/adult/groups.npy",
+    "grid_sz": 11,
+    "grid": [0, 0.001, 0.01, 0.1, 0.25, 0.5, 0.75, 0.9, 0.99, 0.999, 1]
+  }
+}

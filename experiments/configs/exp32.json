@@ -1,0 +1,14 @@
+{"name": "exp31",
+  "descr": "torch acc vs adv robustness",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "loss_fncs": ["log_loss_wrapper", "robust_adv_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_adv_robustness"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "grid_sz": 12,
+    "robust_loss_eps": 0.25,
+    "n_folds": 5
+  }
+}

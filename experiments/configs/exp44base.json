@@ -1,0 +1,14 @@
+{"name": "exp41",
+  "descr": "group fairness loss vs logloss, manual computation",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "loss_fncs": ["log_loss_wrapper", "robust_adv_loss", "regulizer_loss"],
+    "metrics_fncs": ["log_loss_as_metric", "robust_adv_loss_as_metric"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "robust_loss_eps": 0.25,
+    "grid_sz": 15,
+    "n_folds": 5
+  }
+}

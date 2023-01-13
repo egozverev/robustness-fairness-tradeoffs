@@ -1,0 +1,13 @@
+{"name": "exp1",
+  "descr": "Group Fairness vs Acc, linear grid, 10",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_curve",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "group_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_demographic_fairness"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy",
+    "grid_sz": 10
+  }
+}

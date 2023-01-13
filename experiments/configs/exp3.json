@@ -1,0 +1,13 @@
+{"name": "exp1",
+  "descr": "Group Fairness vs Acc with 100 grid size",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_point",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "group_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_demographic_fairness"],
+    "x": "./data/adult/x.npy",
+    "y": "./data/adult/y.npy",
+    "groups": "./data/adult/groups.npy",
+    "grid_sz": 100
+  }
+}

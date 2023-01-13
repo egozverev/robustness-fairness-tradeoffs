@@ -1,0 +1,14 @@
+{"name": "exp1",
+  "descr": "Ind Fairness vs Acc with 10 grid size, log scale: small weights for log loss",
+  "func": "source.pareto_finders.pareto_2d.get_pareto_point",
+  "func_args": {
+    "model": "linear_models.logistic_model",
+    "loss_fncs": ["log_loss_wrapper", "ind_fair_loss", "regulizer_loss"],
+    "metrics_fncs": ["compute_accuracy", "compute_individual_fairness"],
+    "x": "./data/adult/x.npy",
+    "y": "./data/adult/y.npy",
+    "groups": "./data/adult/groups.npy",
+    "grid_sz": 18,
+    "grid": [1.0, 0.9999999999999999, 0.999999999999999, 0.99999999999999, 0.9999999999999, 0.999999999999, 0.99999999999, 0.9999999999, 0.999999999, 0.99999999, 0.9999999, 0.999999, 0.99999, 0.9999, 0.999, 0.99, 0.9, 0]
+  }
+}

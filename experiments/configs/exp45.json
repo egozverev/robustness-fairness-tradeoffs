@@ -1,0 +1,10 @@
+{"name": "exp45",
+  "descr": "Pariwise Robustness loss vs logloss, hypernetworks",
+  "func": "source.pareto_finders.pareto_hypernetworks.get_pareto_front_losses",
+  "func_args": {
+    "loss_fncs": ["log_loss_wrapper", "robust_l2_loss", "regulizer_loss"],
+    "x": "./data/folktables/folk_x.npy",
+    "y": "./data/folktables/folk_y.npy",
+    "groups": "./data/folktables/folk_groups.npy"
+  }
+}

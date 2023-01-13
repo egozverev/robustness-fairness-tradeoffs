@@ -1,0 +1,24 @@
+#!/bin/bash
+#
+
+#SBATCH --job-name=ml_experiment
+#SBATCH -o slurm_output
+#SBATCH -e slurm_errors
+#
+
+#SBATCH --time=00:10:00
+#
+#SBATCH --mem=4G
+#
+#Send emails when a job starts, it is finished or it exits
+#
+#SBATCH --no-requeue
+#
+#SBATCH --export=NONE
+unset SLURM_EXPORT_ENV
+#
+export OMP_NUM_THREADS=1
+#
+module load python
+
+python -m experiments.run_experiment experiments/configs/${exp_name}.json experiments/results/${exp_name}.json
